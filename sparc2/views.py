@@ -83,10 +83,13 @@ class api_data(geodash_data_view):
         ext_lc = extension.lower()
 
         data = {}
+        wfp_countries = [1, 23, 31, 44, 67, 83, 115, 116, 138, 171, 175, 188, 192, 196, 231, 239, 242, 4, 13, 40765, 117, 118, 130, 141, 145, 169, 238, 248, 249, 254, 269, 29, 42, 45, 49, 50, 66, 90, 94, 106, 105, 144, 155, 159, 181, 182, 214, 217, 221, 8, 59, 68, 142, 150, 152, 170, 172, 257, 270, 271, 43, 70, 77, 79, 133, 205, 226, 74, 6, 253, 24, 33, 57, 63, 72, 73, 75, 103, 108, 111, 180, 195]
 
         if dataset == "countries":
             countries = []
             for x in GeographicThesaurusEntry.objects.all():
+                if x.gaul not in wfp_countries:
+                    continue
                 g = None
                 try:
                     g = GAULAdmin0.objects.get(admin0_code=x.gaul)
