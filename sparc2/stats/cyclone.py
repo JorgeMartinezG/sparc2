@@ -56,7 +56,11 @@ def get_summary_cyclone(table_popatrisk=None, iso_alpha3=None):
             "admin2": {}
         }
 
-        summary["all"]["max"]["at_admin2_month"] = max(values)
+	max_value = 0
+	if len(values) != 0:
+		max_value = max(values)
+
+        summary["all"]["max"]["at_admin2_month"] = max_value 
 
         prob_classes = [
           "0.01-0.1",

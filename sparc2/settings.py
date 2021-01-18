@@ -45,7 +45,7 @@ TEMPLATES = [
 #######################################
 # STATIC
 DEBUG_STATIC = True
-STATIC_ROOT = '/var/www/static/'
+STATIC_ROOT = '/opt/www/sparc2/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "sparc2/static"),
@@ -120,7 +120,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 #######################################
-SITEURL = "http://localhost:8000/"
+SITEURL = "http://10.11.40.84/"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -195,12 +195,12 @@ GEODASH_DNS_PREFETCH = [
 GEODASH_STATIC_MONOLITH_CSS = False
 GEODASH_STATIC_MONOLITH_JS = True
 
-SPARC_STATIC_VERSION = "0.0.1"
+SPARC_STATIC_VERSION = "0.0.27"
 GEODASH_STATIC_VERSION = "0.0.1"
 #-----------------------------
 # Dependencies Management
-SPARC_STATIC_VERSION="0.0.1"
-GEODASH_STATIC_VERSION="0.0.1"
+#SPARC_STATIC_VERSION="0.0.6"
+#GEODASH_STATIC_VERSION="0.0.1"
 GEODASH_STATIC_DEPS = {
     "angular": {
         "version": "1.4.0-beta.4"

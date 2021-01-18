@@ -99,7 +99,11 @@ def get_summary_flood(table_popatrisk=None, iso_alpha3=None):
     #print "Breakpoints", breakpoints
     #print "Natural Adjusted", natural_adjusted
     #
-    summary["all"]["max"]["at_admin2_month"] = max(values)
+    max_value = 0
+    if len(values) != 0:
+        max_value = max(values)
+
+    summary["all"]["max"]["at_admin2_month"] = max_value 
     summary["all"]["breakpoints"]["natural_adjusted"] = [0] + natural_adjusted + [max(values)]
 
     for rp in returnPeriods:

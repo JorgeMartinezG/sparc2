@@ -19,10 +19,10 @@ done
 
 echo "BUILD_BOOTSTRAP (-b): $BUILD_BOOTSTRAP"
 cd "$DIR/$DJ_PROJ/static/$DJ_PROJ"
-gulp
+#gulp
 if [[ BUILD_BOOTSTRAP -eq 1 ]]; then
     echo "Compiling Bootstrap"
-    gulp bootstrap:compile
+#    gulp bootstrap:compile
 fi
 cd $DIR
 PY=/home/vagrant/.venvs/$VENV/bin/python

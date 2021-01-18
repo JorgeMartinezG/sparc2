@@ -24,7 +24,7 @@ featurelayers:
       styles: ["landscan_2013"]
       format: 'image/png'
       transparent: true
-      url: "http://staging.geonode.wfp.org/cors/geoserver/wms"
+      url: "https://staging.geonode.wfp.org/cors/geoserver/wms"
     cartography:
       - id: default
         legend:
@@ -49,7 +49,7 @@ featurelayers:
       styles:
       format: 'image/png'
       transparent: true
-      url: "http://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
+      url: "https://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
     cartography:
       - id: default
         legend:
@@ -74,7 +74,7 @@ featurelayers:
       styles:
       format: 'image/png'
       transparent: true
-      url: "http://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
+      url: "https://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
     cartography:
       - id: default
         legend:
@@ -99,7 +99,7 @@ featurelayers:
       styles:
       format: 'image/png'
       transparent: true
-      url: "http://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
+      url: "https://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
     cartography:
       - id: default
         legend:
@@ -125,13 +125,13 @@ featurelayers:
       format: 'image/png'
       transparent: true
       buffer: 256
-      url: "http://geonode.wfp.org/cors/geoserver/wms"
+      url: "https://geonode.wfp.org/cors/geoserver/wms"
     wfs:
       version: "1.0.0"  # Needs to 1.0.0 or returns bad results for some reason.
-      url: "http://geonode.wfp.org/cors/geoserver/wfs"
+      url: "https://geonode.wfp.org/cors/geoserver/wfs"
       geometry: shape
     kml:
-      url: "http://geonode.wfp.org/cors/geoserver/wms/kml"
+      url: "https://geonode.wfp.org/cors/geoserver/wms/kml"
     cartography:
       - id: default
         legend:
@@ -204,7 +204,7 @@ featurelayers:
               value: "{{ feature.attributes.geonameid }}"
               type: link
               label: "GeoNames"
-              url: "http://www.geonames.org/{{ feature.attributes.geonameid }}/"
+              url: "https://www.geonames.org/{{ feature.attributes.geonameid }}/"
               when: "defined"
             - value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lng | number : 4 }}"
               type: link

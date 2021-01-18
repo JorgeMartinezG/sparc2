@@ -88,11 +88,15 @@ def get_summary_drought(table_popatrisk=None, iso_alpha3=None):
                     values_by_admin2_by_prob_class_by_month[admin2_code][prob_class["label"]] = {}
                 values_by_admin2_by_prob_class_by_month[admin2_code][prob_class["label"]][month] = value
 
+
+    max_values = 0
+    if len(values_float) != 0:
+        max_values = int(max(values_float))
     summary = {
         'all': {
             "max": {
               'at_country_month': None,
-              'at_admin2_month': int(max(values_float))
+              'at_admin2_month': max_values 
             },
             'breakpoints': {
                 'natural': natural,

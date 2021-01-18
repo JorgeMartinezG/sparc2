@@ -1,4 +1,5 @@
-bind = 'unix:///tmp/gunicorn.sock'
+#bind = 'unix:///tmp/gunicorn.sock'
+bind = '0.0.0.0:8000'
 workers = 5
 worker_class = 'gevent'
 # worker_class = 'egg:gunicorn#gevent'

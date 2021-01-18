@@ -87,12 +87,14 @@ def get_summary_landslide(table_popatrisk=None, iso_alpha3=None):
                 if prob_class["label"] not in values_by_admin2_by_prob_class_by_month[admin2_code]:
                     values_by_admin2_by_prob_class_by_month[admin2_code][prob_class["label"]] = {}
                 values_by_admin2_by_prob_class_by_month[admin2_code][prob_class["label"]][month] = value
-
+    max_value = 0
+    if len(values_float) != 0:
+        max_value = max(values_float)
     summary = {
         'all': {
             "max": {
               'at_country_month': None,
-              'at_admin2_month': max(values_float)
+              'at_admin2_month': max_value 
             },
             'breakpoints': {
                 'natural': natural,

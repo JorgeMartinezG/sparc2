@@ -275,8 +275,6 @@ def get_geojson_flood(request, iso_alpha3=None):
 
                 if admin1_code in vam_by_admin1:
                     feature["properties"].update(vam_by_admin1[admin1_code])
-
-
     return collection
 
 
